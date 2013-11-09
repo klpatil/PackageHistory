@@ -3,7 +3,7 @@ PackageHistory
 
 This tool allows user to view installed Sitecore packages history.
 
-***TODO SCREENSHOT***
+![Package History](http://sitecorebasics.files.wordpress.com/2013/11/sitecore-package-history.png "Package History")
 
 ##Main Features
 
@@ -13,9 +13,6 @@ This tool allows user to view installed Sitecore packages history.
  2. Who Installed it?
  3. When it got installed?
 3. You can do search, pagination, and sorting!
-
-
-
 
 ##How to Download and Install?
 
