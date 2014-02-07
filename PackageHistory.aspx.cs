@@ -14,7 +14,7 @@ namespace Web.sitecore.admin
         private const string PACKAGE_INSTALLATION_HISTORY_PATH = "/sitecore/system/Packages/Installation history";
         private const string PACKAGE_REGISTRATION_TEMPLATE = "/sitecore/templates/System/Packages/Package registration";
         private const string PACKAGE_REGISTRATION_TEMPLATE_ID = "{22A11D20-5F1D-4216-BF3F-18C016F1F98E}";
-       
+
         protected override void OnInit(EventArgs e)
         {
             base.CheckSecurity(true);
@@ -44,7 +44,7 @@ namespace Web.sitecore.admin
         /// </summary>
         private void LoadPackagesHistory()
         {
-            
+
             // Load Package
             Database coreDatabase = Sitecore.Configuration.Factory.GetDatabase("core");
 
@@ -63,13 +63,14 @@ namespace Web.sitecore.admin
                 foreach (Item aItem in installationItems)
                 {
                     // We need to ensure that we only show package registration type template 
-                    if (aItem != null && aItem.Template.ID.ToString() 
+                    if (aItem != null && aItem.Template.ID.ToString()
                         == PACKAGE_REGISTRATION_TEMPLATE_ID)
                     {
                         TableRow tableRow = new TableRow();
                         tableRow.ID = "row" + aItem.ID.ToShortID().ToString();
                         tableRow.TableSection = TableRowSection.TableBody;
 
+                        
                         // Package name
                         AddTableCell(tableRow, aItem.Fields["Package name"], FieldTypes.Text);
 
@@ -94,6 +95,15 @@ namespace Web.sitecore.admin
                         // Package Installed Date
                         AddTableCell(tableRow, aItem.Fields[Sitecore.FieldIDs.Created], FieldTypes.DateTime);
 
+                        // Package UnInstall Link -- thPackageUnInstall                       
+
+                        TableCell tableCell1 = new TableCell();                        
+                        string valueToPrint = string.Format("<a href='#' class='btn btn-default btn-lg' role='button' onclick=\"ShowUninstallDialog('{0}');\">Uninstall (BETA)</a>",
+                            aItem.ID.ToString());
+                        
+                        tableCell1.Text = valueToPrint;
+                        tableRow.Cells.Add(tableCell1);
+
                         tblPackageDetails.Rows.Add(tableRow);
                     }
 
@@ -101,7 +111,7 @@ namespace Web.sitecore.admin
 
                 lblMessage.Visible = false;
                 tblPackageDetails.Visible = true;
-                
+
             }
 
         }
@@ -163,12 +173,12 @@ namespace Web.sitecore.admin
             if (messageType == "Error")
             {
                 lblMessage.CssClass = "text-danger";
+                
             }
             else
             {
                 lblMessage.CssClass = "text-success";
             }
-
         }
 
     }
@@ -177,5 +187,6 @@ namespace Web.sitecore.admin
     {
         DateTime,
         Text
+
     }
 }
