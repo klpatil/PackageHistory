@@ -1,9 +1,28 @@
 Package History
 ==============
 
+### **Update (8-February-2014) : Packag History v2 has been launched!**
+
+![Package History V2](http://sitecorebasics.files.wordpress.com/2014/02/uninstall-package-final-take-2.gif "Package History V2")
+
+Package History V2 has been launched. In which we provided a functionality using which you can uninstall Sitecore Package/Module just by few clicks.
+
+##Main features (Package History V2):
+
+1. You can uninstall your installed package/module (Using original Package file)
+2. Install/Try as many modules you would like to from Sitecore MarketPlace OR from another Sitecore enthusiast!
+3. View package details in a tabular format
+4. It has few caveats and for that, I would strongly recommend you to read [Package History V2 User Guide] (http://sitecorebasics.wordpress.com/2014/02/08/package-history-v2-user-guide/ "Package History V2 User Guide")
+
+******************
+__________________
+
+
+
 This tool allows user to view installed Sitecore packages history.
 
 ![Package History](http://sitecorebasics.files.wordpress.com/2013/11/sitecore-package-history.png "Package History")
+
 
 ##Main Features
 
@@ -29,5 +48,6 @@ This tool allows user to view installed Sitecore packages history.
 1. Download Sitecore Package, Which will copy the files at required place from here.
 2. Once done, Just access your page using  http://<YOURHOSTNAME>/sitecore/admin/packageshistory/packagehistory.aspx
 3. That's it! Enjoy! :-)
+
 
 >Found any bug? Got suggestion/feedback/comment, Share it here!
