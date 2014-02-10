@@ -12,7 +12,7 @@ Package History V2 has been launched. In which we provided a functionality using
 1. You can uninstall your installed package/module (Using original Package file)
 2. Install/Try as many modules you would like to from Sitecore MarketPlace OR from another Sitecore enthusiast!
 3. View package details in a tabular format
-4. It has few caveats and for that, I would strongly recommend you to read [Package History V2 User Guide] (http://sitecorebasics.wordpress.com/2014/02/08/package-history-v2-user-guide/ "Package History V2 User Guide")
+4. It has few caveats and for that, I would strongly recommend you to read [Package History V2 User Guide] (http://sitecorebasics.wordpress.com/2014/02/10/package-history-v2-user-guide/ "Package History V2 User Guide")
 
 ******************
 __________________
