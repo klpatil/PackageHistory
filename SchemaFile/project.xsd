@@ -1,0 +1,258 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="NewDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+  <xs:element name="Entries">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="x-item" nillable="true" minOccurs="0" maxOccurs="unbounded">
+          <xs:complexType>
+            <xs:simpleContent msdata:ColumnName="x-item_Text" msdata:Ordinal="0">
+              <xs:extension base="xs:string">
+              </xs:extension>
+            </xs:simpleContent>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Converter">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="AccountToEntryConverter" minOccurs="0" maxOccurs="unbounded">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="TransformsAE" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="ItemToEntryConverter" minOccurs="0" maxOccurs="unbounded">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="TransformsIE" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="FileToEntryConverter" minOccurs="0" maxOccurs="unbounded">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Root" type="xs:string" minOccurs="0" />
+              <xs:element name="TransformsFE" type="xs:string" minOccurs="0" />
+              <xs:element name="Transforms" minOccurs="0" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="InstallerConfigurationTransform" minOccurs="0" maxOccurs="unbounded">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="Options" minOccurs="0" maxOccurs="unbounded">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element name="BehaviourOptions" minOccurs="0" maxOccurs="unbounded">
+                                  <xs:complexType>
+                                    <xs:sequence>
+                                      <xs:element name="ItemMode" type="xs:string" minOccurs="0" />
+                                      <xs:element name="ItemMergeMode" type="xs:string" minOccurs="0" />
+                                    </xs:sequence>
+                                  </xs:complexType>
+                                </xs:element>
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="TrivialConverter" minOccurs="0" maxOccurs="unbounded">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="TransformsTV" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Include">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="ItemNameFilter" minOccurs="0" maxOccurs="unbounded">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Pattern" type="xs:string" minOccurs="0" />
+              <xs:element name="FilterSearchType" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="ItemDateFilter" minOccurs="0" maxOccurs="unbounded">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="FilterType" type="xs:string" minOccurs="0" />
+              <xs:element name="NotOlderThan" type="xs:string" minOccurs="0" />
+              <xs:element name="ActionDateTo" type="xs:string" minOccurs="0" />
+              <xs:element name="ActionDateFrom" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="ItemPublishFilter" minOccurs="0" maxOccurs="unbounded">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="PublishDate" type="xs:string" minOccurs="0" />
+              <xs:element name="CheckWorkflow" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="ItemTemplateFilter" minOccurs="0" maxOccurs="unbounded">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Templates" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="ItemUserFilter" minOccurs="0" maxOccurs="unbounded">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="FilterType" type="xs:string" minOccurs="0" />
+              <xs:element name="Accounts" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="ItemLanguageFilter" minOccurs="0" maxOccurs="unbounded">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Languages" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="FileNameFilter" minOccurs="0" maxOccurs="unbounded">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Pattern" type="xs:string" minOccurs="0" />
+              <xs:element name="AcceptDirectories" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="FileDateFilter" minOccurs="0" maxOccurs="unbounded">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="FilterType" type="xs:string" minOccurs="0" />
+              <xs:element name="ActionDateTo" type="xs:string" minOccurs="0" />
+              <xs:element name="ActionDateFrom" type="xs:string" minOccurs="0" />
+              <xs:element name="NotOlderThan" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="project">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="SaveProject" type="xs:string" minOccurs="0" />
+        <xs:element name="Include" type="xs:string" minOccurs="0" />
+        <xs:element name="Exclude" type="xs:string" minOccurs="0" />
+        <xs:element name="Name" type="xs:string" minOccurs="0" />
+        <xs:element name="Metadata" minOccurs="0" maxOccurs="unbounded">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="metadata" minOccurs="0" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="PackageName" type="xs:string" minOccurs="0" />
+                    <xs:element name="Author" type="xs:string" minOccurs="0" />
+                    <xs:element name="Version" type="xs:string" minOccurs="0" />
+                    <xs:element name="Revision" type="xs:string" minOccurs="0" />
+                    <xs:element name="License" type="xs:string" minOccurs="0" />
+                    <xs:element name="Comment" type="xs:string" minOccurs="0" />
+                    <xs:element name="Attributes" type="xs:string" minOccurs="0" />
+                    <xs:element name="Readme" type="xs:string" minOccurs="0" />
+                    <xs:element name="Publisher" type="xs:string" minOccurs="0" />
+                    <xs:element name="PostStep" type="xs:string" minOccurs="0" />
+                    <xs:element name="PackageID" type="xs:string" minOccurs="0" />
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Sources" minOccurs="0" maxOccurs="unbounded">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="accounts" minOccurs="0" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="Include" type="xs:string" minOccurs="0" />
+                    <xs:element name="Exclude" type="xs:string" minOccurs="0" />
+                    <xs:element name="Name" type="xs:string" minOccurs="0" />
+                    <xs:element ref="Entries" minOccurs="0" maxOccurs="unbounded" />
+                    <xs:element ref="Converter" minOccurs="0" maxOccurs="unbounded" />
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="items" minOccurs="0" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="SkipVersions" type="xs:string" minOccurs="0" />
+                    <xs:element name="Exclude" type="xs:string" minOccurs="0" />
+                    <xs:element name="Name" type="xs:string" minOccurs="0" />
+                    <xs:element name="Database" type="xs:string" minOccurs="0" />
+                    <xs:element name="Root" type="xs:string" minOccurs="0" />
+                    <xs:element ref="Converter" minOccurs="0" maxOccurs="unbounded" />
+                    <xs:element ref="Include" minOccurs="0" maxOccurs="unbounded" />
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="files" minOccurs="0" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="Root" type="xs:string" minOccurs="0" />
+                    <xs:element name="Exclude" type="xs:string" minOccurs="0" />
+                    <xs:element name="Name" type="xs:string" minOccurs="0" />
+                    <xs:element ref="Include" minOccurs="0" maxOccurs="unbounded" />
+                    <xs:element ref="Converter" minOccurs="0" maxOccurs="unbounded" />
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="xitems" minOccurs="0" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="SkipVersions" type="xs:string" minOccurs="0" />
+                    <xs:element name="Include" type="xs:string" minOccurs="0" />
+                    <xs:element name="Exclude" type="xs:string" minOccurs="0" />
+                    <xs:element name="Name" type="xs:string" minOccurs="0" />
+                    <xs:element ref="Entries" minOccurs="0" maxOccurs="unbounded" />
+                    <xs:element ref="Converter" minOccurs="0" maxOccurs="unbounded" />
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="xfiles" minOccurs="0" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="Include" type="xs:string" minOccurs="0" />
+                    <xs:element name="Exclude" type="xs:string" minOccurs="0" />
+                    <xs:element name="Name" type="xs:string" minOccurs="0" />
+                    <xs:element ref="Entries" minOccurs="0" maxOccurs="unbounded" />
+                    <xs:element ref="Converter" minOccurs="0" maxOccurs="unbounded" />
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element ref="Converter" minOccurs="0" maxOccurs="unbounded" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element ref="Entries" />
+        <xs:element ref="Converter" />
+        <xs:element ref="Include" />
+        <xs:element ref="project" />
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

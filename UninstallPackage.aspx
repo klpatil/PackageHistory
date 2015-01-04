@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="UninstallPackage.aspx.cs" Inherits="sitecore_admin_PackageHistory_UninstallPackage" %>
+﻿<%@ Page Language="C#" AutoEventWireup="True" CodeBehind="UninstallPackage.aspx.cs" Inherits="sitecore_admin_PackageHistory_UninstallPackage" %>
 
 <!DOCTYPE html>
 
